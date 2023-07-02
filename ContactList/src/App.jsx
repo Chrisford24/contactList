@@ -1,4 +1,4 @@
-import ConstactList from './componets/ContactList'
+import ContactList from './componets/ContactList'
 import SelectedContact from './componets/SelectedContact'
 import './App.css'
 import { useState } from 'react'
@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      {selectedContactId ? <SelectedContact selectedContactId={selectedContactId} setSelectedContactId={setSelectedContactId} /> : <ConstactList setSelectedContactId={setSelectedContactId} />}
+      {selectedContactId ? <SelectedContact selectedContactId={selectedContactId} setSelectedContactId={setSelectedContactId} /> : <ContactList setSelectedContactId={setSelectedContactId} />}
     </>
   )
 }

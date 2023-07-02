@@ -10,16 +10,17 @@ const dummyContacts = [
 ];
 const contactAPI = 'http://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users/';
 
-export default function ConstactList({ setSelectedContactId }) {
+export default function ContactList({ setSelectedContactId }) {
 
-    const [contacts, setContacts] = useState(null);
+    const [contacts, setContacts] = useState([]);
+  
+
     useEffect(() => {
         async function fetchContacts() {
             try {
                 const response = await fetch(contactAPI);
                 const jsonData = await response.json();
-                setContacts(jsonData);
-                console.log("This is from the state: ", contacts);
+                setContacts(jsonData);      
             } catch (error) {
                 console.log(error);
             }
