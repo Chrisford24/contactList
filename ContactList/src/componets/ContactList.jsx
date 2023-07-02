@@ -12,7 +12,7 @@ const contactAPI = 'http://fsa-jsonplaceholder-69b5c48f1259.herokuapp.com/users/
 
 export default function ConstactList({ setSelectedContactId }) {
 
-    const [contacts, setContacts] = useState(dummyContacts);
+    const [contacts, setContacts] = useState(null);
     useEffect(() => {
         async function fetchContacts() {
             try {
